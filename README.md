@@ -4,15 +4,17 @@ A comparative study of Logistic Regression, Random Forest, and SVM for detecting
 
 **TL;DR:** Random Forest performed best, with **96.70% accuracy** on a held-out test set. SSL certificate state and anchor-link behavior were the most predictive features.
 
+📄 **Paper (preprint):** https://doi.org/10.5281/zenodo.23173759
+
 ## 📊 Results
 
-| Model | Accuracy | Precision (macro) | Recall (macro) | F1 (macro) | 5-fold CV (mean ± std) |
+| Model | Accuracy | Precision (weighted) | Recall (weighted) | F1 (weighted) | 5-fold CV (mean ± std) |
 |---|---|---|---|---|---|
 | Logistic Regression | 92.45% | 0.92 | 0.92 | 0.92 | 92.28% ± 0.48% |
 | **Random Forest** 🏆 | **96.70%** | **0.97** | **0.97** | **0.97** | **96.84% ± 1.51%** |
 | SVM (RBF) | 94.71% | 0.95 | 0.95 | 0.95 | 94.46% ± 0.66% |
 
-Precision, recall and F1 are macro averages over both classes on the 2,211-sample test set. For the phishing class alone (label `-1`), Random Forest reached precision 0.97 and recall 0.95, so 47 of 956 phishing sites (about 4.9%) were missed, while 26 of 1,255 legitimate sites (about 2.1%) were wrongly flagged as phishing.
+Precision, recall and F1 are weighted averages over both classes on the 2,211-sample test set. For the phishing class alone (label `-1`), Random Forest reached precision 0.97 and recall 0.95, so 47 of 956 phishing sites (about 4.9%) were missed, while 26 of 1,255 legitimate sites (about 2.1%) were wrongly flagged as phishing.
 
 ![Model Comparison](model_comparison.png)
 
@@ -67,11 +69,13 @@ Open `phishing_detection.ipynb` in Jupyter or Google Colab and run all cells in 
 
 ## 📄 Full Paper
 
-The complete academic write-up (introduction, related work, methodology, results, discussion) is available in [`Phishing_Detection_Paper.docx`](./Phishing_Detection_Paper.docx).
+Preprint (Zenodo): https://doi.org/10.5281/zenodo.23173759
+
+Citation: Sulman, E. D. (2026). Comparative Analysis of Machine Learning Algorithms for Phishing Website Detection. Zenodo. https://doi.org/10.5281/zenodo.23173759
 
 ## 👤 Author
 
-**Elnazeer Dawod Suliman**
+**Elnazeer Dawod Sulman**
 
 ## 📜 License
 
